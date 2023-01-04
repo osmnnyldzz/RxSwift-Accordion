@@ -22,6 +22,7 @@ class ViewController: UIViewController {
        
         self.createDummyCategories()
         self.bindTableView()
+        self.cellTapHandle()
         
     }
     
@@ -34,6 +35,22 @@ class ViewController: UIViewController {
                 cell.titleLabel.text = element.categoryName
                 
         }.disposed(by: disposeBag)
+    }
+    
+    private func cellTapHandle() {
+        self.tableView
+            .rx
+            .modelSelected(Categories.self)
+            .subscribe(onNext:  { category in
+                print("Selected Category Name: \(category.categoryName)")
+            }).disposed(by: disposeBag)
+        
+        self.tableView
+            .rx
+            .modelDeselected(Categories.self)
+            .subscribe(onNext: { category in
+                print("Deselected Category Name: \(category.categoryName)")
+            }).disposed(by: disposeBag)
     }
     
     private func createDummyCategories() {
