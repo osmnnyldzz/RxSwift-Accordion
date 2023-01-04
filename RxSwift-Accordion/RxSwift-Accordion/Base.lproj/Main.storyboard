@@ -20,15 +20,15 @@
                                 <rect key="frame" x="50" y="109" width="293" height="659"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyTableViewCell" id="Ok7-SF-4v7" customClass="MyTableViewCell" customModule="RxSwift_Accordion" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="50" width="293" height="20.666666030883789"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MyTableViewCell" id="Ok7-SF-4v7" customClass="MyTableViewCell" customModule="RxSwift_Accordion" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="293" height="21"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ok7-SF-4v7" id="IRu-Zo-l0x">
-                                            <rect key="frame" x="0.0" y="0.0" width="293" height="20.666666030883789"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="293" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIY-Mf-nI8">
-                                                    <rect key="frame" x="0.0" y="0.0" width="293" height="20.666666666666668"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="293" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
