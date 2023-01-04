@@ -14,6 +14,7 @@
 		A02C06892964C7B200294ED2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A02C06872964C7B200294ED2 /* Main.storyboard */; };
 		A02C068B2964C7B300294ED2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A02C068A2964C7B300294ED2 /* Assets.xcassets */; };
 		A02C068E2964C7B300294ED2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A02C068C2964C7B300294ED2 /* LaunchScreen.storyboard */; };
+		A0B857DD2965ABCD00D3C2DC /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B857DC2965ABCD00D3C2DC /* MyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		A02C068A2964C7B300294ED2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A02C068D2964C7B300294ED2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A02C068F2964C7B300294ED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0B857DC2965ABCD00D3C2DC /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +58,6 @@
 				9C938A29E8D1765EDB69047E /* Pods-RxSwift-Accordion.debug.xcconfig */,
 				372E1A6DCFC9B59E64C8DC94 /* Pods-RxSwift-Accordion.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -88,6 +89,7 @@
 				A02C068A2964C7B300294ED2 /* Assets.xcassets */,
 				A02C068C2964C7B300294ED2 /* LaunchScreen.storyboard */,
 				A02C068F2964C7B300294ED2 /* Info.plist */,
+				A0B857DC2965ABCD00D3C2DC /* MyTableViewCell.swift */,
 			);
 			path = "RxSwift-Accordion";
 			sourceTree = "<group>";
@@ -208,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A02C06862964C7B200294ED2 /* ViewController.swift in Sources */,
+				A0B857DD2965ABCD00D3C2DC /* MyTableViewCell.swift in Sources */,
 				A02C06822964C7B200294ED2 /* AppDelegate.swift in Sources */,
 				A02C06842964C7B200294ED2 /* SceneDelegate.swift in Sources */,
 			);
