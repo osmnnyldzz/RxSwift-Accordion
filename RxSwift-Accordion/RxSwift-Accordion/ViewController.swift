@@ -33,7 +33,8 @@ class ViewController: UIViewController {
             { index, element, cell in
                 
                 cell.titleLabel.text = element.categoryName
-                
+                cell.extensileConfigurations(element)
+
         }.disposed(by: disposeBag)
     }
     
@@ -42,15 +43,19 @@ class ViewController: UIViewController {
             .rx
             .modelSelected(Categories.self)
             .subscribe(onNext:  { category in
-                print("Selected Category Name: \(category.categoryName)")
+                
+                self.categories.value.forEach { tempCategory in
+                    if tempCategory.categoryName == category.categoryName {
+                        tempCategory.expand = !tempCategory.expand
+                    } else {
+                        tempCategory.expand = false
+                    }
+                }
+                
+                self.categories.accept(self.categories.value)
+                
             }).disposed(by: disposeBag)
         
-        self.tableView
-            .rx
-            .modelDeselected(Categories.self)
-            .subscribe(onNext: { category in
-                print("Deselected Category Name: \(category.categoryName)")
-            }).disposed(by: disposeBag)
     }
     
     private func createDummyCategories() {
@@ -68,7 +73,7 @@ class ViewController: UIViewController {
     }
 }
 
-private class Categories {
+class Categories {
     var categoryName:String
     var expand:Bool
     var level:Int
