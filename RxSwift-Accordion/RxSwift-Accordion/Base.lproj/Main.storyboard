@@ -56,6 +56,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="arrowImage" destination="rcN-0r-8yd" id="JRP-Gz-iAk"/>
+                                            <outlet property="cellLeadingConstraint" destination="RTx-Bn-mxD" id="CtR-4M-LRk"/>
                                             <outlet property="titleLabel" destination="KIY-Mf-nI8" id="FNI-gR-yyd"/>
                                         </connections>
                                     </tableViewCell>

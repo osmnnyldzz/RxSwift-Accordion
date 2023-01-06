@@ -18,6 +18,8 @@ class MyTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     
+    @IBOutlet weak var cellLeadingConstraint: NSLayoutConstraint!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
        
@@ -26,7 +28,7 @@ class MyTableViewCell: UITableViewCell {
     func extensileConfigurations(_ element: Categories) {
         self.arrowImageVisible(element.canExpand)
         
-        if element.expand {
+        if element.expanded {
             self.arrowImage.image = UIImage(systemName: "chevron.up.circle.fill")
         } else {
             self.arrowImage.image = UIImage(systemName: "chevron.down.circle.fill")
