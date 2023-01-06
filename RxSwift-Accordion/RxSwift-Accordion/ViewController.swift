@@ -21,11 +21,9 @@ class ViewController: UIViewController {
     
     private let disposeBag = DisposeBag()
     
-    private let categories: BehaviorRelay<[Categories]> = BehaviorRelay(value: [])
-    
+    private let categories      : BehaviorRelay<[Categories]>      = BehaviorRelay(value: [])
     private let selectedCategory: BehaviorRelay<[Int: Categories]> = BehaviorRelay(value: [:])
-    
-    private let cellStatus: BehaviorRelay<Extensile> = BehaviorRelay(value: .none)
+    private let cellStatus      : BehaviorRelay<Extensile>         = BehaviorRelay(value: .none)
     
     private let indentation = 8
     
@@ -48,7 +46,8 @@ class ViewController: UIViewController {
             cell.titleLabel.text = element.categoryName
             cell.extensileConfigurations(element)
             cell.cellLeadingConstraint.constant = CGFloat(element.level * self.indentation)
-            
+            cell.setBackgroundColor(element)
+
         }.disposed(by: disposeBag)
     }
     
@@ -134,7 +133,7 @@ extension ViewController {
             let dummyCategory = Categories(categoryId: .random(in: 0...10000),
                                            categoryName: "Category \(category)",
                                            expanded: false,
-                                           level: 0,
+                                           level: 1,
                                            canExpand: category % 2 == 0 ? true : false,
                                            children: [])
             dummyCategories.append(dummyCategory)
@@ -147,7 +146,7 @@ extension ViewController {
         for category in 0...4 {
             
             let dummyCategory = Categories(categoryId: .random(in: 0...10000),
-                                           categoryName: "Child Category \(parentCategory.level + 1)",
+                                           categoryName: "Child Category \(parentCategory.level)",
                                            expanded: false,
                                            level: parentCategory.level + 1,
                                            canExpand: category % 2 == 0 ? true : false,

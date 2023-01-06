@@ -29,14 +29,25 @@ class MyTableViewCell: UITableViewCell {
         self.arrowImageVisible(element.canExpand)
         
         if element.expanded {
-            self.arrowImage.image = UIImage(systemName: "chevron.up.circle.fill")
+            self.arrowImage.image = UIImage(systemName: "arrowtriangle.up.fill")
         } else {
-            self.arrowImage.image = UIImage(systemName: "chevron.down.circle.fill")
+            self.arrowImage.image = UIImage(systemName: "arrowtriangle.down.fill")
         }
     }
     
     func arrowImageVisible(_ status: Bool) {
         arrowImage.isHidden = !status
     }
+    
+    func setBackgroundColor(_ element: Categories) {
+        let color = UIColor(r: CGFloat(40 * element.level), g: CGFloat(10 * element.level), b: CGFloat(10 * element.level))
+        self.backgroundColor = color
+    }
 
+}
+
+extension UIColor {
+    convenience init(r: CGFloat, g: CGFloat, b: CGFloat) {
+        self.init(red: r/255, green: g/255, blue: b/255, alpha: 1)
+    }
 }
